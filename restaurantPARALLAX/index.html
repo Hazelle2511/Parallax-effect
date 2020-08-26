@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Rosa</title>
+    <!--Font awesome CDN-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Herr+Von+Muellerhoff&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Scroll reveal CDN-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <img src="./images/hero.jpg" alt="" class="parallax" />
+      <div class="text-wrapper">
+        <h1 class="headline">Parallax</h1>
+        <h2 class="sub-headline">Scrolling Effect</h2>
+      </div>
+    </section>
+    <section class="overflow"></section>
+
+    <script>
+      window.addEventListener("scroll", function () {
+        const parallax = document.querySelector(".parallax");
+        let scrollPosition = window.pageYOffset;
+
+        // console.log(scrollPosition);
+
+        parallax.style.transform = "translateY(" + scrollPosition * 0.5 + "px)";
+      });
+    </script>
+  </body>
+</html>
